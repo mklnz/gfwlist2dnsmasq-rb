@@ -1,0 +1,10 @@
+base_url: https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt
+out_file: ./dnsmasq.d/gfwlist_rules.conf
+dns_host: 127.0.0.1
+dns_port: 5353
+ipset_name: gfwlist
+extras:
+- google.com
+- google.com.hk
+- google.com.jp
+- google.com.au
