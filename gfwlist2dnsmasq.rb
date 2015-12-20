@@ -31,12 +31,12 @@ class GFWListConverter
       l.chomp!
 
       if COMMENT_PATTERN.match(l)
-        puts "Comment: #{l}"
+        #puts "Comment: #{l}"
       elsif match = DOMAIN_PATTERN.match(l)
         domains << match[1]
-        puts "Added: #{l}"
+        #puts "Added: #{l}"
       else
-        puts "No valid domain: #{l}"
+        #puts "No valid domain: #{l}"
       end
     end
 
