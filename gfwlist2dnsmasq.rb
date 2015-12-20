@@ -5,6 +5,7 @@ require 'open-uri'
 require 'yaml'
 require 'base64'
 require 'set'
+# require 'byebug'
 
 class GFWListConverter
   COMMENT_PATTERN = /^\!|\[|^@@|^\d+\.\d+\.\d+\.\d+/
@@ -32,7 +33,7 @@ class GFWListConverter
       if COMMENT_PATTERN.match(l)
         puts "Comment: #{l}"
       elsif match = DOMAIN_PATTERN.match(l)
-        domains << match[0]
+        domains << match[1]
         puts "Added: #{l}"
       else
         puts "No valid domain: #{l}"
